@@ -1,0 +1,24 @@
+name: SpiceScoreboard
+version: '${version}'
+main: dev.spice.spicescoreboard.SpiceScoreboard
+api-version: '26.1'
+description: Donut SMP style sidebar scoreboard (money, playtime, name, rank)
+authors: [Spice]
+softdepend: [Vault, Essentials, EconomyShopGUI, LuckPerms]
+
+commands:
+  spicescoreboard:
+    description: Manage the SpiceScoreboard sidebar
+    usage: /<command> <reload|toggle>
+    aliases: [ssb]
+
+permissions:
+  spicescoreboard.use:
+    description: See the sidebar scoreboard
+    default: true
+  spicescoreboard.toggle:
+    description: Toggle your own scoreboard
+    default: true
+  spicescoreboard.reload:
+    description: Reload the config
+    default: op

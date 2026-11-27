@@ -1,0 +1,46 @@
+# ───────────────────────────────────────────────
+#  SpiceScoreboard
+#  All text uses MiniMessage: https://docs.advntr.dev/minimessage/format.html
+#
+#  Placeholders usable in any line:
+#    <player>    username
+#    <rank>      LuckPerms prefix (MiniMessage or &-codes) or group name
+#    <money>     Vault balance (works with Essentials / EconomyShopGUI)
+#    <playtime>  total time played
+#    <online>    players online
+# ───────────────────────────────────────────────
+
+title: "<gradient:#ff6a00:#ffcc00><bold>SPICE SMP</bold></gradient>"
+
+# How often the board refreshes, in ticks (20 = 1 second)
+update-interval-ticks: 20
+
+# Money display
+currency-symbol: "$"
+money-format: abbreviated      # abbreviated = $1.2K / $3.4M   |   full = $1,234.56
+
+# Rank display
+rank-source: prefix            # prefix = LuckPerms prefix (LPC style)   |   group = primary group name
+rank-fallback: "<gray>Member"  # shown when LuckPerms isn't installed
+
+# Worlds where the board is hidden
+disabled-worlds: []
+
+# Up to 15 lines. Top line first. Blank lines: " "
+lines:
+  - " "
+  - "<gold>» <gray>Player <white><player>"
+  - "<gold>» <gray>Rank <rank>"
+  - "<gold>» <gray>Money <green><money>"
+  - "<gold>» <gray>Playtime <aqua><playtime>"
+  - " "
+  - "<yellow>play.yourserver.net"
+
+messages:
+  prefix: "<gold>[Spice] <gray>"
+  reloaded: "Config reloaded."
+  toggled-on: "Scoreboard <green>enabled<gray>."
+  toggled-off: "Scoreboard <red>disabled<gray>."
+  no-permission: "<red>You don't have permission."
+  usage: "Usage: /spicescoreboard <reload|toggle>"
+  players-only: "Only players can use this."
